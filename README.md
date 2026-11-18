@@ -1,4 +1,4 @@
-# ThinkPad X380 Yoga Dotfiles
+# dotfiles
 
 Reproducible Arch Linux + Nix Home Manager + Hyprland setup tailored for the Lenovo ThinkPad X380 Yoga (dual-booting with Windows 11).
 
