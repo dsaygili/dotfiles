@@ -1,6 +1,11 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
+let
+   dotfilesDir = "${config.home.homeDirectory}/.dotfiles";
+in
+{
   wayland.windowManager.hyprland = {
     enable = true;
+    configType = "lua";
     package = null;
     portalPackage = null;
 
@@ -82,4 +87,6 @@
       ];
     };
   };
+  xdg.configFile."hypr/hyprland.lua".source = 
+  	config.lib.file.mkOutOfStoreSymlink "${dotfilesDir}/dotfiles/config/hypr/hyprland.lua";
 }

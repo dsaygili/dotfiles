@@ -1,12 +1,13 @@
 { ... }: {
   programs.git = {
     enable = true;
-    userName = "dsaygili";
-    userEmail = "dsaygili@users.noreply.github.ccom";
-    extraConfig = {
+    settings = {
+      user = {
+        name = "dsaygili";
+        email = "dsaygili@users.noreply.github.com";
+      };
       init.defaultBranch = "main";
       pull.rebase = false;
     };
   };
 }
-

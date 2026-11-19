@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
+{
   home.username = "reesebars";
   home.homeDirectory = "/home/reesebars";
   home.stateVersion = "24.11";
@@ -7,15 +8,15 @@
 
   imports = [
     ./modules/hyprland.nix
+    ./modules/shell.nix
+    ./modules/git.nix
   ];
 
   home.packages = with pkgs; [
-    git
+    just
     neovim
     ripgrep
     tmux
-    starship
-    zsh
     wl-clipboard
     grim
     slurp
